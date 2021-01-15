@@ -5,10 +5,10 @@ test("getDefaultState returns expected default state", () => {
 
   const expectedDefaultState = {
     zipCode: "",
-    number: 0,
-    latitude: 0,
-    longitude: 0,
-    noResidents: 0,
+    number: "",
+    latitude: "",
+    longitude: "",
+    noResidents: "",
     touched: {
       zipCode: false,
       number: false,
