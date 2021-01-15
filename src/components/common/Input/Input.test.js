@@ -117,7 +117,7 @@ test("an error message is shown if input has been touched and is invalid, i.e. e
   const errorElement = getByTestId(inputErrorId);
 
   expect(errorElement.textContent.trim()).toBe(
-    "Please fill in number for value"
+    "Please fill in valid number for value"
   );
 });
 
@@ -134,7 +134,7 @@ test("the error message cannot be found if the input value is valid", () => {
     />
   );
 
-  const errorElement = () => getByTestId(inputErrorId);
+  const inputElement = () => getByTestId(inputTestId);
 
-  expect(errorElement).not.toThrowError();
+  expect(inputElement).not.toThrowError();
 });
