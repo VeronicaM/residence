@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
+import { defaultStringValidator } from "../../../services/validators.service";
 
 function Input({
   type,
@@ -9,8 +10,9 @@ function Input({
   fieldName,
   onFieldChanged,
   onBlur,
-  validator,
+  validator = defaultStringValidator,
 }) {
+
   const hasError = touched && !validator(inputValue);
 
   const fieldClasses = classnames({
@@ -42,7 +44,7 @@ function Input({
       </label>
       {hasError && (
         <span data-testid="input-error" className="c-error">
-          Please fill in {type} for {fieldName}
+          Please fill in valid {type} for {fieldName}
         </span>
       )}
     </div>
