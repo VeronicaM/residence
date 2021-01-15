@@ -72,6 +72,18 @@ test("a decimal value above 90 and below -90 is not a valid latitude", () => {
   expect(aboveUpperLimit).toBe(false);
 });
 
+test("an empty latitude value is invalid", () => {
+  const result = latitudeValidator("");
+
+  expect(result).toBe(false);
+});
+
+test("an empty longitude value is invalid", () => {
+  const result = longitudeValidator("");
+
+  expect(result).toBe(false);
+});
+
 test("95015 is a valid zipcode", () => {
   const result = zipCodeValidator("95377");
   expect(result).toBe(true);
