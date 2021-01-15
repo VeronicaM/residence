@@ -8,7 +8,7 @@ import {
   fieldsConfig,
 } from "./residence-form.service";
 
-import Input from "../common/Input/Input";
+import Input from "../../core/components/Input/Input";
 
 function ResidenceForm({ onAddResidence }) {
   const defaultState = getDefaultState();

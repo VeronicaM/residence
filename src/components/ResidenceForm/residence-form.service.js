@@ -3,7 +3,7 @@ import {
   positiveIntegerValidator,
   latitudeValidator,
   longitudeValidator,
-} from "../../services/validators.service.js";
+} from "../../core/services/validators.service.js";
 
 export const fieldsConfig = [
   {

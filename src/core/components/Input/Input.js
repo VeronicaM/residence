@@ -1,7 +1,7 @@
 import React, { memo } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
-import { defaultStringValidator } from "../../../services/validators.service";
+import { defaultStringValidator } from "../../services/validators.service";
 
 function Input({
   type,

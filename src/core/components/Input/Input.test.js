@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import {
   defaultStringValidator,
   positiveIntegerValidator,
-} from "../../../services/validators.service";
+} from "../../services/validators.service";
 
 import Input from "./Input.js";
 
