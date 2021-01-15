@@ -8,27 +8,32 @@ import {
 export const fieldsConfig = [
   {
     name: "zipCode",
-    type: "string",
+    type: "text",
+    label: "ZIP Code",
     validator: zipCodeValidator,
   },
   {
     name: "number",
     type: "number",
+    label: "Residence Number",
     validator: positiveIntegerValidator,
   },
   {
     name: "latitude",
     type: "number",
+    label: "Latitude",
     validator: latitudeValidator,
   },
   {
     name: "longitude",
     type: "number",
+    label: "Longitude",
     validator: longitudeValidator,
   },
   {
     name: "noResidents",
     type: "number",
+    label: "Number of Residents",
     validator: positiveIntegerValidator,
   },
 ];
@@ -37,7 +42,7 @@ const getFieldNamesWithDefaultValue = (
   { asBoolean } = { asBoolean: false }
 ) => {
   return fieldsConfig.reduce((acc, field) => {
-    acc[field.name] = field.type === "string" ? "" : 0;
+    acc[field.name] = "";
 
     if (asBoolean) {
       acc[field.name] = false;

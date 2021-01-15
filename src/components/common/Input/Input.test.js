@@ -17,6 +17,7 @@ test("text inputs can be created", () => {
       <Input
         fieldName="name"
         type="text"
+        label="Name"
         inputValue="apple"
         touched={false}
         onFieldChanged={mockFunc}
@@ -33,6 +34,7 @@ test("number inputs can be created", () => {
       <Input
         fieldName="value"
         type="number"
+        label="Value"
         inputValue="10"
         touched={false}
         onFieldChanged={mockFunc}
@@ -49,6 +51,7 @@ test("other input types which are not text or number throw an error ", () => {
       <Input
         fieldName="your CV"
         type="file"
+        label="Your CV"
         inputValue={{}}
         touched={false}
         onFieldChanged={mockFunc}
@@ -65,6 +68,7 @@ test("negative numbers are not allowed in number type inputs", () => {
     <Input
       fieldName="value"
       type="number"
+      label="Value"
       inputValue=""
       touched={false}
       onFieldChanged={mockFunc}
@@ -84,6 +88,7 @@ test("input value is reset when empty inputValue is passed in", () => {
     <Input
       fieldName="value"
       type="number"
+      label="Value"
       inputValue="20"
       touched={false}
       onFieldChanged={mockFunc}
@@ -106,6 +111,7 @@ test("an error message is shown if input has been touched and is invalid, i.e. e
     <Input
       fieldName="value"
       type="number"
+      label="Value"
       inputValue=""
       touched={true}
       onFieldChanged={mockFunc}
@@ -117,7 +123,7 @@ test("an error message is shown if input has been touched and is invalid, i.e. e
   const errorElement = getByTestId(inputErrorId);
 
   expect(errorElement.textContent.trim()).toBe(
-    "Please fill in valid number for value"
+    "Please fill in valid number for Value"
   );
 });
 
@@ -126,6 +132,7 @@ test("the error message cannot be found if the input value is valid", () => {
     <Input
       fieldName="value"
       type="number"
+      label="Value"
       inputValue="10"
       touched={true}
       onFieldChanged={mockFunc}

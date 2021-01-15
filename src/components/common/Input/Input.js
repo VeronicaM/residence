@@ -8,6 +8,7 @@ function Input({
   inputValue,
   touched,
   fieldName,
+  label,
   onFieldChanged,
   onBlur,
   validator = defaultStringValidator,
@@ -31,7 +32,7 @@ function Input({
   return (
     <div className={fieldClasses}>
       <label htmlFor={fieldName} className="c-label">
-        <strong> {fieldName}</strong>
+        <strong> {label}:</strong>
         <input
           data-testid="custom-input"
           type={type}
@@ -44,7 +45,7 @@ function Input({
       </label>
       {hasError && (
         <span data-testid="input-error" className="c-error">
-          Please fill in valid {type} for {fieldName}
+          Please fill in valid {type} for {label}
         </span>
       )}
     </div>
@@ -53,6 +54,7 @@ function Input({
 
 Input.propTypes = {
   fieldName: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   type: PropTypes.oneOf(["text", "number"]).isRequired,
   inputValue: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
     .isRequired,
