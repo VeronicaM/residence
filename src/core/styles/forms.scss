@@ -3,8 +3,8 @@ $input-gap: 30px;
 .c-field {
     display: flex;
     flex-direction: column;
-    margin-right: $input-gap;
     flex: 0 0 200px;
+    margin-bottom: 20px;
 }
 
 .c-label {
