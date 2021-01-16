@@ -67,7 +67,6 @@ function App() {
         <HeatMap
           points={residences}
           center={residences[0]}
-          cener={{ lat: 44.4268, lng: 26.1025 }}
         />
       </main>
       <footer>Created by @Veronica Mihai 2021 with ☕ and 🎵</footer>
