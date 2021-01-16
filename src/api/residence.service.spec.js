@@ -16,7 +16,7 @@ const mockFormData = {
 };
 
 beforeEach(() => {
-  fetch = jest.fn(() =>
+  global.fetch = jest.fn(() =>
     Promise.resolve({
       json: () => mockResidences,
     })
