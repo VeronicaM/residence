@@ -1,7 +1,7 @@
 // Services
 import LoggerService from "./logger.service.js";
 
-const apiBase = process.env.API_URL || "http://localhost:3000";
+const apiBase = process.env.REACT_APP_API_URL || "http://localhost:3000";
 
 const endpointUrls = {
   residences: `${apiBase}/residences`,
