@@ -22,3 +22,11 @@ test("renders header text", async () => {
     expect(screen.getByText(/Residence App/i)).toBeInTheDocument()
   );
 });
+
+test("the component is rendered correctly with the passed in data", async () => {
+  const { container } = render(<App />);
+  await waitFor(() => {
+    expect(screen.getByText(/Residence App/i)).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
+  });
+});
