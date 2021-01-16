@@ -30,7 +30,12 @@ afterEach(() => {
 test("I can get the residences data", () => {
   ResidenceService.getResidences();
   expect(fetch).toHaveBeenCalledTimes(1);
-  expect(fetch).toHaveBeenCalledWith(testUrl, { method: "GET" });
+  expect(fetch).toHaveBeenCalledWith(testUrl, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 });
 
 test("I can add a new residence with formData", () => {
@@ -38,6 +43,9 @@ test("I can add a new residence with formData", () => {
   expect(fetch).toHaveBeenCalledTimes(1);
   expect(fetch).toHaveBeenCalledWith(testResourceURI, {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(mockFormData),
   });
 });
