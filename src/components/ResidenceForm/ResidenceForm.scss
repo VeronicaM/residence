@@ -1,0 +1,9 @@
+.residence-form__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (min-width: 550px) and (max-width: 1415px) {
+    justify-content: end;
+  }
+}

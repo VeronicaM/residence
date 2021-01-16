@@ -10,6 +10,8 @@ import {
 
 import Input from "../../core/components/Input/Input";
 
+import "./ResidenceForm.scss";
+
 function ResidenceForm({ onAddResidence }) {
   const defaultState = getDefaultState();
 
@@ -56,7 +58,7 @@ function ResidenceForm({ onAddResidence }) {
   );
 
   return (
-    <form className="c-row">
+    <form className="c-row residence-form__container">
       {renderFieldsInputs}
       <button
         type="submit"
