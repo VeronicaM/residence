@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# Residence APP
+
+[![CircleCI](https://circleci.com/gh/VeronicaM/residence.svg?style=svg)
+
+See a heatmap of residences by number of Residents. 
+Add new residence entry. 
+
+![Screenshot1](https://user-images.githubusercontent.com/2241065/104815510-ade9ab00-581d-11eb-9cbd-a10a10989d8b.png)
+
+
+Made using
+
+- Google Maps API through [google-maps-react](https://www.npmjs.com/package/google-maps-react) npm package
+- [React] with hooks (https://reactjs.org/)
+- [Prop-types](https://www.npmjs.com/package/prop-types) for typing 
+- [Sass](http://sass-lang.com/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- [Netlify](https://www.netlify.com/) for deployment
+- [JSON-server](https://github.com/typicode/json-server) for a fake dummy API 
+- [Circle CI](https://circleci.com/) for running tests automattically on every PR
+
+## Requirements
+
+- Node v12.16.1
+- Yarn 1.22.4
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Instalation
+- Clone this repo
+- CD into the root directory
+- Run yarn
 
-In the project directory, you can run:
+## Running in dev mode
+- Fill in your REACT_APP_GOOGLE_MAPS_API_KEY value in .env.local
+- run `yarn start`
 
-### `yarn start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs a json-server with dummy data in parallel with the create react app client in the development mode.
+Open [http://localhost:3001](http://localhost:3001) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
+
+## Other Available Scripts
+
+In the project directory, you can run:
 
 ### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `yarn lint`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Runs eslint 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn lint:format`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Formats files using prettier 
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Technical choices and tradeoffs
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Create React App** to generate the initial structure of the app.
+I have made this choice for the ease of setup of React with Babel 7 config as well as all the other plugins like class-properties.
+It also sets up Jest, Sass and Webpack.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+**Tradeoffs**
+This is very fast and convinient setup for prototyping but it has a lot of unnecessary complexity
+If I had enough time I would do a proper setup from scratch and I would include only what it's necessary for the project.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
