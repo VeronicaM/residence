@@ -17,7 +17,7 @@ test("a non empty object value returns false", () => {
   expect(result).toBe(false);
 });
 
-test("a positive integer number returns true ", () => {
+test("a positive integer number returns true", () => {
   const result = positiveIntegerValidator(10);
   expect(result).toBe(true);
 });

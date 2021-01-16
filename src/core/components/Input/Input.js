@@ -13,7 +13,6 @@ function Input({
   onBlur,
   validator = defaultStringValidator,
 }) {
-
   const hasError = touched && !validator(inputValue);
 
   const fieldClasses = classnames({
