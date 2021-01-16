@@ -76,14 +76,14 @@ Generates HTML and CSS files as static assets.
 I have made this choice for the ease of setup of React with Babel 7 config as well as all the other plugins like class-properties.
 It also sets up Jest, Sass and Webpack. **Trade-off:s** This is very fast and convinient setup for prototyping but it has a lot of unnecessary complexity. If I had enough time I would do a proper setup from scratch and I would include only what it's necessary for the project.
 
-**Google Maps API Key** I hae protected the api key from being stored in repository by being passing as env variable
+**Google Maps API Key** I have protected the api key from being stored in repository by passing it as env variable
 I have also protected it from being used unreasonably by restricting its HTTP referrer to currently deployed to domain https://residence-veram.netlify.app/ and to http://localhost:3001 for testing purposes. Another option for protecting the API key would have been to have the app server side rendered so that the API key request doesn't appear on the client side.
 
-**JSON-Server** I have used JSON-server only for development purposes. **Trade-offs:** For a production ready app, I would have used a MongoDB or GraphQL with serverless approach for the backend. 
+**JSON-Server** I have used JSON-server only for development purposes. **Trade-offs:** For a production ready app, I would have used a MongoDB or GraphQL database with serverless approach for the backend. 
 
-**Deployment only in dev mode** The app has been deployed in dev mode on Netlify. **Trade-offs:**  For a production ready app, I would have used stored the static assets on an S3 bucket configured as a Cloudfront distribution to act as a CDN and ensure best loading times across the world. 
+**Deployment only in dev mode** The app has been deployed in dev mode on Netlify. **Trade-offs:**  For a production ready app, I would have stored the static assets in a S3 bucket configured as a Cloudfront distribution to act as a CDN and ensure best loading times across the world. 
     
-**Test coverage**  Main functionality of the app is tested like the form validation, data fetching and app rendering. **Trade-offs:**
+**Test coverage**  Main functionality of the app is tested: the form validation, data fetching and app rendering. **Trade-offs:**
    Test coverage is low and there's an [issue](https://github.com/VeronicaM/residence/issues/6) with the setup. 
 
 **Other improvements** 
