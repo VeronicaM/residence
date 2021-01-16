@@ -6,18 +6,21 @@ import ResidenceService from "./api/residence.service";
 
 // Components
 import ResidenceForm from "./components/ResidenceForm/ResidenceForm";
+import HeatMap from "./components/Heatmap/Heatmap";
 
 import "./App.scss";
 
 const filename = "App.js";
 
 function App() {
-  const { residences, loading, error, setState } = useGetResidences(filename);
+  const { residences = [], loading, error, setState } = useGetResidences(
+    filename
+  );
 
-  const onAddResidence = (newResidence) => {
-    const onSuccess = () => {
+  const onAddResidence = ({ latitude, longitude, noResidents }) => {
+    const onSuccess = (response) => {
       setState({
-        residences: [...residences, newResidence],
+        residences: [...residences, response],
         loading: false,
         error: false,
       });
@@ -28,7 +31,14 @@ function App() {
     };
 
     setState({ residences, loading: true, error: false });
-    ResidenceService.addResidence(newResidence).then(onSuccess).catch(onError);
+
+    ResidenceService.addResidence({
+      lat: +latitude,
+      lng: +longitude,
+      weight: +noResidents,
+    })
+      .then(onSuccess)
+      .catch(onError);
   };
 
   if (error) {
@@ -50,10 +60,15 @@ function App() {
   return (
     <div className="app__container">
       <header>
-        <h1> Residence App </h1>
+        <h1 className="app__title"> Residence App </h1>
       </header>
-      <main>
+      <main className="main__container">
         <ResidenceForm onAddResidence={onAddResidence} />
+        <HeatMap
+          points={residences}
+          center={residences[0]}
+          cener={{ lat: 44.4268, lng: 26.1025 }}
+        />
       </main>
       <footer>Created by @Veronica Mihai 2021 with ☕ and 🎵</footer>
     </div>
