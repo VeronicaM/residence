@@ -43,6 +43,9 @@ const fetchDataFromEndpoint = (
 
   let requestConfig = {
     ...config,
+    headers: {
+      "Content-Type": "application/json"
+    }
   };
 
   if (abortController && abortController.signal) {
