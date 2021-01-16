@@ -10,6 +10,16 @@
   }
 }
 
+.app__title {
+  text-align: center;
+}
+
+.main__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .loader__container {
   align-items: center;
   display: flex;

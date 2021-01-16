@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the component is rendered correctly with the passed in data 1`] = `
+<div>
+  <div
+    class="app__container"
+  >
+    <header>
+      <h1
+        class="app__title"
+      >
+         Residence App 
+      </h1>
+    </header>
+    <main
+      class="main__container"
+    >
+      <form
+        class="c-row residence-form__container"
+      >
+        <div
+          class="c-field"
+        >
+          <label
+            class="c-label"
+            for="zipCode"
+          >
+            <strong>
+               
+              ZIP Code
+              :
+            </strong>
+            <input
+              class="c-input"
+              data-testid="custom-input"
+              name="zipCode"
+              type="text"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="c-field"
+        >
+          <label
+            class="c-label"
+            for="number"
+          >
+            <strong>
+               
+              Residence Number
+              :
+            </strong>
+            <input
+              class="c-input"
+              data-testid="custom-input"
+              name="number"
+              type="number"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="c-field"
+        >
+          <label
+            class="c-label"
+            for="latitude"
+          >
+            <strong>
+               
+              Latitude
+              :
+            </strong>
+            <input
+              class="c-input"
+              data-testid="custom-input"
+              name="latitude"
+              type="number"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="c-field"
+        >
+          <label
+            class="c-label"
+            for="longitude"
+          >
+            <strong>
+               
+              Longitude
+              :
+            </strong>
+            <input
+              class="c-input"
+              data-testid="custom-input"
+              name="longitude"
+              type="number"
+              value=""
+            />
+          </label>
+        </div>
+        <div
+          class="c-field"
+        >
+          <label
+            class="c-label"
+            for="noResidents"
+          >
+            <strong>
+               
+              Number of Residents
+              :
+            </strong>
+            <input
+              class="c-input"
+              data-testid="custom-input"
+              name="noResidents"
+              type="number"
+              value=""
+            />
+          </label>
+        </div>
+        <button
+          class="c-cta"
+          disabled=""
+          type="submit"
+        >
+          Add
+        </button>
+      </form>
+      <div>
+        Loading...
+      </div>
+    </main>
+    <footer>
+      Created by @Veronica Mihai 2021 with ☕ and 🎵
+    </footer>
+  </div>
+</div>
+`;
