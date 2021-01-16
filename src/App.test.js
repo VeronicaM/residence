@@ -27,6 +27,6 @@ test("the component is rendered correctly with the passed in data", async () => 
   const { container } = render(<App />);
   await waitFor(() => {
     expect(screen.getByText(/Residence App/i)).toBeInTheDocument();
-    expect(container).toMatchSnapshot();
   });
+  expect(container).toMatchSnapshot();
 });
