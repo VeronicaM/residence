@@ -1,0 +1,19 @@
+.heatmap__container {
+  height: 70vh;
+  min-width: 75vw;
+
+  & > div {
+    height: 70vh !important;
+    width: 75vw !important;
+  }
+}
+
+@media screen and (max-width: 1415px) {
+  .heatmap__container {
+    min-width: 85vw;
+
+    & > div {
+      width: 85vw !important;
+    }
+  }
+}
