@@ -23,7 +23,7 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "pretest": "yarn test",
+    "prestart": "yarn build",
     "start": "concurrently \"yarn server\" \"serve -l 3001 -s build\"",
     "start:dev": "cross-env PORT=3001 react-scripts start",
     "build": "react-scripts build",
