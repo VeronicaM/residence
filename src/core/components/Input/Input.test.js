@@ -3,7 +3,7 @@ import { render, fireEvent } from "@testing-library/react";
 import {
   defaultStringValidator,
   positiveIntegerValidator,
-} from "../../../services/validators.service";
+} from "../../services/validators.service";
 
 import Input from "./Input.js";
 
@@ -45,7 +45,7 @@ test("number inputs can be created", () => {
   expect(numberInput).not.toThrowError();
 });
 
-test("other input types which are not text or number throw an error ", () => {
+test("other input types which are not text or number throw an error", () => {
   const fileInput = () =>
     render(
       <Input
@@ -101,7 +101,18 @@ test("input value is reset when empty inputValue is passed in", () => {
 
   expect(inputField.value).toBe("20");
 
-  rerender(<Input inputValue="" />);
+  rerender(
+    <Input
+      fieldName="value"
+      type="number"
+      label="Value"
+      inputValue=""
+      touched={false}
+      onFieldChanged={mockFunc}
+      onBlur={mockFunc}
+      validator={positiveIntegerValidator}
+    />
+  );
 
   expect(inputField.value).toBe("");
 });

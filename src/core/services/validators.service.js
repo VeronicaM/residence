@@ -1,7 +1,9 @@
 import isValidZipcode from "is-valid-zipcode";
 
 function isNumeric(value) {
-  return String(value).length >= 1 && !isNaN(parseFloat(value)) && isFinite(value);
+  return (
+    String(value).length >= 1 && !isNaN(parseFloat(value)) && isFinite(value)
+  );
 }
 export const defaultStringValidator = (value) =>
   typeof value == "string" && Boolean(value);
@@ -18,10 +20,12 @@ export const longitudeValidator = (value) =>
 export const zipCodeValidator = (value) =>
   typeof value === "string" && isValidZipcode(value);
 
-export default {
+const moduleExports = {
   defaultStringValidator,
   positiveIntegerValidator,
   latitudeValidator,
   longitudeValidator,
   zipCodeValidator,
 };
+
+export default moduleExports;

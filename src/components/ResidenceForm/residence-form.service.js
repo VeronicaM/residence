@@ -3,7 +3,7 @@ import {
   positiveIntegerValidator,
   latitudeValidator,
   longitudeValidator,
-} from "../../services/validators.service.js";
+} from "../../core/services/validators.service.js";
 
 export const fieldsConfig = [
   {
@@ -68,8 +68,10 @@ export const isFormValid = (values) => {
   return hasErrors.length === fieldsConfig.length;
 };
 
-export default {
+const moduleExports = {
   getDefaultState,
   fieldsConfig,
   isFormValid,
 };
+
+export default moduleExports;
