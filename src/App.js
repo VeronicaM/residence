@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 // Services
 import useGetResidences from "./hooks/get-residences";

@@ -13,7 +13,9 @@ const log = ({ message, type, filename }) => {
   }
 };
 
-export default {
+const moduleExports = {
   log,
   MESSAGE_TYPES,
 };
+
+export default moduleExports;

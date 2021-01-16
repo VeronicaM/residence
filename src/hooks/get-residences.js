@@ -39,6 +39,7 @@ export default function useGetResidences(filename) {
     return () => {
       getResidencesAbortController.abort();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { ...state, setState };

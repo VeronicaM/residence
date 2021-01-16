@@ -68,8 +68,10 @@ export const isFormValid = (values) => {
   return hasErrors.length === fieldsConfig.length;
 };
 
-export default {
+const moduleExports = {
   getDefaultState,
   fieldsConfig,
   isFormValid,
 };
+
+export default moduleExports;

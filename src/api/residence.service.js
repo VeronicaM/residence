@@ -35,7 +35,9 @@ export const addResidence = (formData, abortController = null) => {
   return EndpointService.fetchDataFromEndpoint(params, abortController);
 };
 
-export default {
+const moduleExports = {
   getResidences,
   addResidence,
 };
+
+export default moduleExports;
