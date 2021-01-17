@@ -25,7 +25,7 @@
   "scripts": {
     "prestart": "yarn build",
     "start": "concurrently \"yarn server\" \"serve -l 3001 -s build\"",
-    "start:dev": "cross-env PORT=3001 react-scripts start",
+    "start:dev": "concurrently \"yarn server\" \"cross-env PORT=3001 react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:coverage": "jest --coverage",
