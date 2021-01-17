@@ -1,10 +1,11 @@
 .heatmap__container {
-  height: 70vh;
-  min-width: 75vw;
+  height: 80vh;
+  margin-left: 40px;
+  min-width: 70vw;
 
   & > div {
-    height: 70vh !important;
-    width: 75vw !important;
+    height: 80vh !important;
+    width: 70vw !important;
   }
 }
 

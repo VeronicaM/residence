@@ -11,6 +11,8 @@ $input-gap: 30px;
 }
 
 .c-label {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 5px;
   text-transform: capitalize;
 }
